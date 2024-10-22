@@ -1,31 +1,29 @@
 package com.keyin.entity;
 
-    import javax.persistence.Entity;
-    import javax.persistence.GeneratedValue;
-    import javax.persistence.GenerationType;
-    import javax.persistence.Id;
+import javax.persistence.*;
 
-    @Entity
+@Entity
     public class Aircraft {
 
         @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private Long id;
+        @SequenceGenerator(name = "aircraft_sequence", sequenceName = "aircraft_sequence", allocationSize = 1, initialValue = 1)
+        @GeneratedValue(generator = "aircraft_sequence")
+        private long id;
         private String model;
         private String manufacturer;
-    public Long getId() {
+        public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+        public void setId(long id) {
         this.id = id;
     }
 
-    public String getModel() {
+        public String getModel() {
         return model;
     }
 
-    public void setModel(String model) {
+        public void setModel(String model) {
         this.model = model;
     }
 }
