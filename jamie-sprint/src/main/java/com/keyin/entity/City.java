@@ -13,6 +13,8 @@ public class City {
     @GeneratedValue(generator = "city_sequence")
     private long id;
     private String name;
+    private String state;
+    private int population;
 
     // Getters and Setters
     public Long getId() {
@@ -29,5 +31,21 @@ public class City {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public int getPopulation() {
+        return population;
+    }
+
+    public void setPopulation(int population) {
+        this.population = population;
     }
 }

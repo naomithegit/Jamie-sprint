@@ -13,13 +13,14 @@ public class Airport {
     @GeneratedValue(generator = "airport_sequence")
     private long id;
     private String name;
+    private String airportCode;
 
     // Getters and Setters
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -29,5 +30,13 @@ public class Airport {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getAirportCode() {
+        return airportCode;
+    }
+
+    public void setAirportCode(String airportCode) {
+        this.airportCode = airportCode;
     }
 }
