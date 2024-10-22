@@ -1,21 +1,25 @@
 package com.keyin.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 public class Passenger {
 
     @Id
-    private Long id;
+    @SequenceGenerator(name = "passenger_sequence", sequenceName = "passenger_sequence", allocationSize = 1, initialValue = 1)
+    @GeneratedValue(generator = "passenger_sequence")
+    private long id;
     private String name;
 
     // Getters and Setters
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
