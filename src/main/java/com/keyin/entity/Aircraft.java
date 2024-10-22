@@ -1,6 +1,8 @@
 
 package com.keyin.entity;
 
+
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,7 +15,7 @@ public class Aircraft {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String type;
-    private String airlineName;
+    private String airLineName;
     private int numberOfPassengers;
 
     // Getters and Setters
@@ -34,11 +36,11 @@ public class Aircraft {
     }
 
     public String getAirlineName() {
-        return airlineName;
+        return airLineName;
     }
 
     public void setAirlineName(String airlineName) {
-        this.airlineName = airlineName;
+        this.airLineName = airlineName;
     }
 
     public int getNumberOfPassengers() {
