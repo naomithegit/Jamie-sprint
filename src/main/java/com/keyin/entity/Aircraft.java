@@ -1,10 +1,4 @@
 
-
-
-
-//check out my changes
-
-
 package com.keyin.entity;
 
 import javax.persistence.Entity;
